@@ -1,12 +1,13 @@
 //Add a new item to the collection
 POST http://localhost:3000/destinations
 Content-Type: application/json
-  {
-    "name": "Waterloo",
-    "placesToTravel": ["KWC Market", "Niagara", "Tobermory Islands"],
-    "nearbyAirport": "Waterloo International Airport",
-    "estimatedTravelDate": "2024-08-11"
-  }
+
+{
+  "name": "Waterloo",
+  "placesToTravel": ["KWC Market", "Niagara", "Tobermory Islands"],
+  "nearbyAirport": "Waterloo International Airport",
+  "estimatedTravelDate": "2024-08-11"
+}
 
 ###
 
@@ -16,12 +17,12 @@ GET http://localhost:3000/destinations
 ###
 
 //Retrieve a single item by its ID
-GET http://localhost:3000/destinations/66725c4f460e356a5dd06609
+GET http://localhost:3000/destinations/66727b5017df1a5b902661b4
 
 ###
 
 //Update an item by its ID
-PUT http://localhost:3000/destinations/66725c4f460e356a5dd06609
+PUT http://localhost:3000/destinations/66727b5017df1a5b902661b4
 Content-Type: application/json
 
 {
