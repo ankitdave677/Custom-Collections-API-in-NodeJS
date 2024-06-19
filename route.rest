@@ -16,12 +16,12 @@ GET http://localhost:3000/destinations
 ###
 
 //Retrieve a single item by its ID
-GET http://localhost:3000/destinations/66725ca0460e356a5dd0660d
+GET http://localhost:3000/destinations/66725c4f460e356a5dd06609
 
 ###
 
 //Update an item by its ID
-PUT http://localhost:3000/destinations/66725ca0460e356a5dd0660d
+PUT http://localhost:3000/destinations/66725c4f460e356a5dd06609
 Content-Type: application/json
 
 {
@@ -34,4 +34,4 @@ Content-Type: application/json
 ###
 
 //Delete an item by its ID
-DELETE http://localhost:3000/destinations/66725ca0460e356a5dd0660d
+DELETE http://localhost:3000/destinations/66725c4f460e356a5dd06609
