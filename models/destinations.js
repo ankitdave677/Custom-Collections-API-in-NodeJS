@@ -1,3 +1,7 @@
+//Student Name: Ankit Dave
+// Student Number: 8959634
+
+
 const mongoose = require('mongoose');
 
 const destinationSchema = new mongoose.Schema({
