@@ -71,4 +71,4 @@ Content-Type: application/json
 ### Delete an item by its ID
 DELETE http://localhost:3000/destinations/ID
 
-Apart from this, you can also run this web application with using the tools such as Postman or cURL.
+# Apart from this, you can also run this web application with using the tools such as Postman or cURL.
