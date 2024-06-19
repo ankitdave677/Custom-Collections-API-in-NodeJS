@@ -1,0 +1,21 @@
+GET http://localhost:3000/destinations
+
+###
+
+GET http://localhost:3000/destinations/6672561f460e356a5dd06601
+
+###
+
+PUT http://localhost:3000/destinations/6672561f460e356a5dd06601
+Content-Type: application/json
+
+{
+  "name": "Toronto (Updated)",
+  "placesToTravel": ["Royal Garden", "Louvre Museum", "Notre Dame Cathedral"],
+  "nearbyAirport": "YYZ Airport",
+  "estimatedTravelDate": "2024-08-01"
+}
+
+###
+
+DELETE http://localhost:3000/destinations/6672561f460e356a5dd06601
