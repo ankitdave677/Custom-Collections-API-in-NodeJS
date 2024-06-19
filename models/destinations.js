@@ -12,7 +12,7 @@ const destinationSchema = new mongoose.Schema({
   estimatedTravelDate: { type: Date, required: true }
 });
 
-// Create a model from the schem
+// Create a model from the schema
 const Destination = mongoose.model('Destination', destinationSchema);
 
 // Export the Destination model
