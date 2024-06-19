@@ -1,12 +1,27 @@
+//Add a new item to the collection
+POST http://localhost:3000/destinations
+Content-Type: application/json
+  {
+    "name": "Waterloo",
+    "placesToTravel": ["KWC Market", "Niagara", "Tobermory Islands"],
+    "nearbyAirport": "Waterloo International Airport",
+    "estimatedTravelDate": "2024-08-11"
+  }
+
+###
+
+//Retrieve all items from the collection
 GET http://localhost:3000/destinations
 
 ###
 
-GET http://localhost:3000/destinations/6672561f460e356a5dd06601
+//Retrieve a single item by its ID
+GET http://localhost:3000/destinations/66725ca0460e356a5dd0660d
 
 ###
 
-PUT http://localhost:3000/destinations/6672561f460e356a5dd06601
+//Update an item by its ID
+PUT http://localhost:3000/destinations/66725ca0460e356a5dd0660d
 Content-Type: application/json
 
 {
@@ -18,4 +33,5 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/destinations/6672561f460e356a5dd06601
+//Delete an item by its ID
+DELETE http://localhost:3000/destinations/66725ca0460e356a5dd0660d

@@ -1,19 +1,23 @@
+// Import required packages
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const Destination = require('./models/destinations');
 
+// Load environment variables from .env file
 dotenv.config();
 
+// Create an Express application
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
+// Connect to MongoDB using the provided URI
 mongoose.connect(process.env.MONGODB_URI,).then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Could not connect to MongoDB', err));
 
-// CREATE
+// CREATE - Add a new item to the collection
 app.post('/destinations', async (req, res) => {
     const destination = new Destination(req.body);
     try {
@@ -24,7 +28,7 @@ app.post('/destinations', async (req, res) => {
     }
 });
 
-// READ ALL
+// READ ALL - Retrieve all items from the collection
 app.get('/destinations', async (req, res) => {
     try {
         const destinations = await Destination.find();
@@ -34,7 +38,7 @@ app.get('/destinations', async (req, res) => {
     }
 });
 
-// READ ONE
+// READ ONE - Retrieve a single item by its ID
 app.get('/destinations/:id', async (req, res) => {
     const _id = req.params.id;
     try {
@@ -48,7 +52,7 @@ app.get('/destinations/:id', async (req, res) => {
     }
 });
 
-// UPDATE
+// UPDATE - Update an item by its ID
 app.put('/destinations/:id', async (req, res) => {
     const _id = req.params.id;
     try {
@@ -62,7 +66,7 @@ app.put('/destinations/:id', async (req, res) => {
     }
 });
 
-// DELETE
+// DELETE - Delete an item by its ID
 app.delete('/destinations/:id', async (req, res) => {
     const _id = req.params.id;
     try {
@@ -76,6 +80,7 @@ app.delete('/destinations/:id', async (req, res) => {
     }
 });
 
+//Start the server
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
